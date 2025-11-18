@@ -1,0 +1,249 @@
+/* --- Variabel Warna --- */
+:root {
+    --primary-color: #e53e3e; /* Merah untuk Warmindo */
+    --secondary-color: #f6ad55; /* Kuning/Orange */
+    --text-color: #2d3748;
+    --bg-light: #f7fafc;
+}
+
+/* --- Global Styling --- */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* --- Tombol CTA --- */
+.btn-cta {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.btn-cta:hover {
+    background-color: #fdb96b;
+}
+
+.menu-cta {
+    margin-top: 40px; 
+    background-color: var(--primary-color); 
+    color: white;
+}
+
+.final-btn-cta {
+    background-color: white !important; 
+    color: var(--primary-color) !important;
+}
+
+/* --- Section Styling --- */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-light {
+    background-color: white;
+}
+
+h3 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    background-image: url('https://via.placeholder.com/1200x500/e53e3e/ffffff?text=Gambar+Indomie+Menggugah'); /* Ganti dengan URL gambar Warmindo Anda */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* --- Fitur Section --- */
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    flex-basis: calc(25% - 20px);
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+}
+
+.feature-item h4 {
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+/* --- Menu Section --- */
+.menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.menu-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+}
+
+.menu-card h4 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.menu-card p {
+    font-size: 0.9em;
+    color: #718096;
+}
+
+.menu-card .price {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    display: block;
+    margin-top: 10px;
+}
+
+/* --- Testimoni Section --- */
+.testimoni-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimoni-item {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimoni-item blockquote {
+    margin: 0;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+.testimoni-item p {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* --- Final CTA --- */
+.final-cta {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 60px 0;
+}
+
+.final-cta h3 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.final-cta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #2d3748;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero h2 {
+        font-size: 1.2em;
+    }
+
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    .menu-grid, .testimoni-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-card, .testimoni-item {
+        width: 90%;
+    }
+
+    .final-cta h3 {
+        font-size: 2em;
+    }
+}
